@@ -1,12 +1,3 @@
-class Solution:
-    def removeDuplicates(self, nums: List[int]) -> int:
-        slow = 0
-        for fast in range(1, len(nums)):
-            if nums[fast] != nums[fast - 1]:
-                nums[slow] = nums[fast]
-                slow += 1
-            return slow + 1
-        return slow
 '''
 Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place such that each unique element appears only once. The relative order of the elements should be kept the same. Then return the number of unique elements in nums.
 
@@ -16,3 +7,12 @@ Change the array nums such that the first k elements of nums contain the unique 
 Return k.
 Custom Judge:
 '''
+class Solution:
+    def removeDuplicates(self, nums: List[int]) -> int:
+        slow = 0
+        for fast in range(1, len(nums)):
+            if nums[fast] != nums[fast - 1]:
+                nums[slow] = nums[fast]
+                slow += 1
+            return slow + 1
+        return slow

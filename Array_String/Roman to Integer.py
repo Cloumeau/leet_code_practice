@@ -39,4 +39,3 @@ class Solution:
                 result += current_value
             prev_value = current_value
         return result
-                

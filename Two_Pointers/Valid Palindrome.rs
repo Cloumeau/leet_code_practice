@@ -7,7 +7,7 @@ impl Solution {
         let mut New_s = String::new();
         for char in s.chars() {
             if char.is_alphanumeric() {
-                New_s.push(char);
+                New_s.push(char.to_ascii_lowercase());
             }
         }
         New_s == New_s.chars().rev().collect::<String>()

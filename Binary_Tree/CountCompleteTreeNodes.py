@@ -16,7 +16,7 @@ According to Wikipedia, every level, except possibly the last, is completely fil
 Design an algorithm that runs in less than O(n) time complexity.
 '''
 class Solution:
-    def countNodes(self, root:Optional[TreeNode]) -> int:
-        if not root:
+    def countNodes(self, node:Optional[TreeNode]) -> int:
+        if not node:
             return 0
-        return 1 + self.countNodes(root.left) + self.countNodes(root.right)
+        return 1 + self.countNodes(node.left) + self.countNodes(node.right)
